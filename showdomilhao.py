@@ -4,16 +4,25 @@ from time import sleep
 perguntas = ['1','2','3','4','5']
 i = 's'
 p = 0
-
+#-------Sistema de perguntas---------#
 while (i == 's' or i == 'S'):
     rodada=(random.choice(perguntas))
     print(rodada)
     print(i)
     if rodada == '1':
         print('Saldo: R${}'.format(p))
-        i = (input('vc quer parra?'))
+        print('Qual bicho transmite Doença de Chagas?')
+        print('A) Pulga\nB) Barebeiro\nC) Barata\nD) Abelha')
+        r=input('Digite a letra da resposta: ')
+        if r == 'B' or r == 'b':
+            p = p + 1
+            print('Você Acertou!')
+            print('Saldo: R${}'.format(p))
+        else:
+            print('VocÊ errou!')
+            print('Saldo: R${}'.format(p))
+        i = (input('vc quer continuar?'))
         perguntas.remove('1')
-        p = p + 1
 
     if rodada == '2':
         print('Saldo: R${}'.format(p))
