@@ -1,9 +1,18 @@
 import random
 from time import sleep
 
+import pygame
+
 perguntas = ['1','2','3','4','5']
 i = 's'
 p = 0
+
+pygame.init()
+
+pygame.mixer.music.load('sounds/abertura.mp3')
+pygame.mixer.music.play()
+input('vc escuta:')
+
 #-------Sistema de perguntas---------#
 while (i == 's' or i == 'S'):
     rodada=(random.choice(perguntas))
