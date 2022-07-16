@@ -11,7 +11,7 @@ pygame.init()
 
 pygame.mixer.music.load('sounds/abertura.mp3')
 pygame.mixer.music.play()
-input('vc escuta?s')
+input('vc escuta?')
 
 #-------Sistema de perguntas---------#
 while (i == 's' or i == 'S'):
