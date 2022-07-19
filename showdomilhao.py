@@ -7,12 +7,16 @@ perguntas = ['1','2','3','4','5']
 i = 's'
 p = 0
 
-pygame.init()
-
+pygame.mixer.pre_init()
+pygame.mixer.init()
 pygame.mixer.music.load('sounds/abertura.mp3')
 pygame.mixer.music.play()
-input('vc escuta?')
+input('v escuta?')
+pygame.mixer.music.fadeout(3000)
 
+print('-'*30)
+print('Bem vindo ao SHOW DO MILHÃO versão Python')
+print('-'*30)
 #-------Sistema de perguntas---------#
 while (i == 's' or i == 'S'):
     rodada=(random.choice(perguntas))
