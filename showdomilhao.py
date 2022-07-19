@@ -11,12 +11,13 @@ pygame.mixer.pre_init()
 pygame.mixer.init()
 pygame.mixer.music.load('sounds/abertura.mp3')
 pygame.mixer.music.play()
-input('v escuta?')
-pygame.mixer.music.fadeout(3000)
 
 print('-'*30)
-print('Bem vindo ao SHOW DO MILHÃO versão Python')
+print('\nBem vindo ao SHOW DO MILHÃO versão Python\n')
 print('-'*30)
+
+input('Vamos começar?')
+pygame.mixer.music.fadeout(3000)
 #-------Sistema de perguntas---------#
 while (i == 's' or i == 'S'):
     rodada=(random.choice(perguntas))
